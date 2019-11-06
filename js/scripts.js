@@ -1,8 +1,12 @@
 // Business Logic
+function Game(currentRoll, currentTurn){
+  this.currentRoll = currentRoll;
+  this.currentTurn = currentTurn;
 
-function player(subTotal, total) {
-  this.subTotal = subTotal; //points
-  this.total = total; //bank
+}
+function player(points, bank) {
+  this.points = points; //points
+  this.bank = bank; //bank
 }
 
 player.prototype.addSubTotal = function() {
@@ -47,6 +51,7 @@ var bank = 0;
 $(document).ready(function() {
 
 
+
   $(".btn-dark").click(function() {
     $(".game").show();
     $(".btn-dark").hide();
@@ -78,9 +83,8 @@ $(document).ready(function() {
 
 
     $(".holdButton").click(function() {
-
-      if(score > 0) {
-        var bank = $(".activePlayer .bank").val();
+      var bank = $(".activePlayer .bank").val();
+      if(bank < bank + score) {
         bank += score;
         score = 0;
         rolls = [];

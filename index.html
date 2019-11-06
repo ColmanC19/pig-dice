@@ -21,11 +21,12 @@
       </div>
       <div class="row">
         <div class="col-md-6 dice game mb-4">
-          <p></p>
+          <h1>Current Roll:</h1>
+          <h3 class="currentRoll"></h3>
           <img src="" alt="">
           <form class="rollTurn">
-            <button class="btn btn-primary rollButton" type="button" name="button">Roll</button>
-            <button class="btn btn-info hold" type="submit" name="button">Hold</button>
+            <button class="btn btn-primary rollButton" type="button">Roll</button>
+            <button class="btn btn-info holdButton" type="button">Hold</button>
           </form>
         </div>
       </div>
@@ -36,10 +37,10 @@
               <h2>Player 1</h2>
             </div>
             <div class="card-body bg-white text-dark">
-              <h3>Current Roll:</h3>
-              <p class=" active currentRoll">0</p>
               <h3>Score:</h3>
               <p class="currentScore">0</p>
+              <h3>Bank:</h3>
+              <p class="bank">0</p>
             </div>
           </div>
         </div>
@@ -49,12 +50,10 @@
               <h2>Player 2</h2>
             </div>
             <div class="card-body bg-white text-dark">
-
-
-              <h3>Current Roll:</h3>
-              <p class="currentRoll"></p>
               <h3>Score:</h3>
-              <p></p>
+              <p class="currentScore">0</p>
+              <h3>Bank:</h3>
+              <p class="bank">0</p>
             </div>
           </div>
         </div>

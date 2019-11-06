@@ -1,11 +1,18 @@
+body{
+  background-color: #c7ccd1;
+}
+
 .intro, .dice {
   margin: 0 auto;
   text-align: center;
 }
 
-/* .dice, .player {
+/* .game {
   display:none;
 } */
- body{
-   background-color: #c7ccd1;
- }
+
+.activePlayer {
+  box-shadow: -3px -5px 15px  10px #90ee90;
+  font-size: 20px;
+  font-weight: bold;
+}

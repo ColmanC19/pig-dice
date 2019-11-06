@@ -20,32 +20,41 @@
 
       </div>
       <div class="row">
-        <div class="col-md-6 dice mb-4">
+        <div class="col-md-6 dice game mb-4">
+          <p></p>
           <img src="" alt="">
-          <form class="" action="index.html" method="post">
-            <button class="btn btn-primary" type="button" name="button">Roll</button>
-            <button class="btn btn-info" type="submit" name="button">Hold</button>
+          <form class="rollTurn">
+            <button class="btn btn-primary rollButton" type="button" name="button">Roll</button>
+            <button class="btn btn-info hold" type="submit" name="button">Hold</button>
           </form>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 mb-3 player">
-          <div class="card bg-primary">
+        <div class="col-md-6 mb-3 player game">
+          <div class="card bg-primary player1 activePlayer">
             <div class="card-header text-white">
               <h2>Player 1</h2>
             </div>
             <div class="card-body bg-white text-dark">
-
+              <h3>Current Roll:</h3>
+              <p class=" active currentRoll">0</p>
+              <h3>Score:</h3>
+              <p class="currentScore">0</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3 player">
-          <div class="card bg-danger">
+        <div class="col-md-6 mb-3 player game">
+          <div class="card bg-danger player2">
             <div class="card-header text-white">
               <h2>Player 2</h2>
             </div>
             <div class="card-body bg-white text-dark">
 
+
+              <h3>Current Roll:</h3>
+              <p class="currentRoll"></p>
+              <h3>Score:</h3>
+              <p></p>
             </div>
           </div>
         </div>

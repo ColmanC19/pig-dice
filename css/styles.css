@@ -1,0 +1,11 @@
+.intro, .dice {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* .dice, .player {
+  display:none;
+} */
+ body{
+   background-color: #c7ccd1;
+ }

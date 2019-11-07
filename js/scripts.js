@@ -1,20 +1,25 @@
 // Business Logic
-function Game(currentRoll, currentTurn){
-  this.currentRoll = currentRoll;
-  this.currentTurn = currentTurn;
+function Player(currentTotal, currentGrandTotal){
+  this.currentTotal = currentTotal;
+  this.currentGrandTotal = currentGrandTotal;
+  this.currentRoll = 0;
+
 
 }
-function player(points, bank) {
+function Game(points, bank) {
+  var rollDice = function() {
+  roll = Math.floor((Math.random() * 6) + 1);
+
   this.points = points; //points
   this.bank = bank; //bank
 }
 
-player.prototype.addSubTotal = function() {
-  this.roll += subTotal;
+player.prototype.roll = function(roll) {
+  this.roll += rollDice;
 }
 
 player.prototype.addTotal = function() {
-   total += this.roll + subTotal;
+   currentGrandTotal += this.roll + currentTotal;
 }
 
 player.prototype.clearTotal = function() {
@@ -65,36 +70,36 @@ $(document).ready(function() {
 
     console.log(score);
 
-    if (roll > 1) {
-      $(".currentRoll").text(roll);
-      $(".activePlayer .currentScore").text(score);
-
-     } else if (roll === 1) {
-      roll = "Oops! You rolled a 1!";
-      score = 0;
-      rolls = [];
-      $(".currentRoll").text(roll);
-      $(".activePlayer .currentScore").text(score);
-      $(".player1").toggleClass("activePlayer");
-      $(".player2").toggleClass("activePlayer");
-      // $(".currentRoll").toggle(".active");
-      }
-    });
-
-
-    $(".holdButton").click(function() {
-      var bank = $(".activePlayer .bank").val();
-      if(bank < bank + score) {
-        bank += score;
-        score = 0;
-        rolls = [];
-        $(".currentRoll").text(roll);
-        $(".activePlayer .currentScore").text(score);
-      }
-
-      $(".activePlayer .bank").text(bank);
-      $(".player1").toggleClass("activePlayer");
-      $(".player2").toggleClass("activePlayer");
-  });
-
-});
+//     if (roll > 1) {                    -------IGNORE FOR NOW-----
+//       $(".currentRoll").text(roll);
+//       $(".activePlayer .currentScore").text(score);
+//
+//      } else if (roll === 1) {
+//       roll = "Oops! You rolled a 1!";
+//       score = 0;
+//       rolls = [];
+//       $(".currentRoll").text(roll);
+//       $(".activePlayer .currentScore").text(score);
+//       $(".player1").toggleClass("activePlayer");
+//       $(".player2").toggleClass("activePlayer");
+//       // $(".currentRoll").toggle(".active");
+//       }
+//     });
+//
+//
+//     $(".holdButton").click(function() {
+//       var bank = $(".activePlayer .bank").val();
+//       if(bank < bank + score) {
+//         bank += score;
+//         score = 0;
+//         rolls = [];
+//         $(".currentRoll").text(roll);
+//         $(".activePlayer .currentScore").text(score);
+//       }
+//
+//       $(".activePlayer .bank").text(bank);
+//       $(".player1").toggleClass("activePlayer");
+//       $(".player2").toggleClass("activePlayer");
+//   });
+//
+// });
